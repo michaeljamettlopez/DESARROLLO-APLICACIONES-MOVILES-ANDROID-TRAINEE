@@ -1,5 +1,10 @@
-(MAIN ACTIVITY.JAVA)
 
+
+Evidencia “DÍA 1 SEMANA 11” del 05/07:
+Crear una interfaz con dos botones bonitos que muestren cada uno un mensaje Toast.
+
+
+(MAIN ACTIVITY.JAVA)
 
 
 
