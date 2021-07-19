@@ -1,0 +1,7 @@
+
+(STRINGS.XML)
+
+
+<resources>
+    <string name="app_name">appmichel55</string>
+</resources>
