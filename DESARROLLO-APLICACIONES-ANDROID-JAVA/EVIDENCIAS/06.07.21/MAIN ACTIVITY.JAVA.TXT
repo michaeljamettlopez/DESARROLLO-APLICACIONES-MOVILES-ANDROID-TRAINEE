@@ -1,0 +1,36 @@
+
+
+Evidencia “DÍA 2 SEMANA 11” del 06/07:
+Crear una interfaz de usuario que reciba 2 números por teclado, con botones que realicen distintas operaciones matemáticas entre los dos números, y que muestre el resultado. ANDROID STUDIO
+
+
+(MAIN ACTIVITY.JAVA)
+
+
+package com.example.appmichel55;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import java.text.MessageFormat;
+
+public class MainActivity extends AppCompatActivity {
+
+    EditText num1, num2;Ë
+    TextView numresultado;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        num1 = (EditText) FindViewbyId(R.id.TXTNUM1);
+        num2 = (EditText) FindViewbyId(R.id.TXTNUM2);
+        numresultado = (TextView) FindViewbyId(R.id.numresultado);
+
+        Toast.makeText(getApplicationContext(),"hola este es un toast",Toast.LENGTH_LONG).show();
+    }
+
+    private Object FindViewbyId(int txtnum1){
