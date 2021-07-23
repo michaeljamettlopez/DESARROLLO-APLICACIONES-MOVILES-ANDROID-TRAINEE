@@ -1,1 +1,96 @@
 
+Evidencia “DÍA 6 SEMANA 11” del 10/07:
+Crear una aplicación que haga lo mismo que las anteriores pero que funcione con Spinner.
+
+MAIN ACTIVITY.JAVA)
+
+package com.example.appmichel55;
+
+import androidx.appcompat.app.AppCompatActivity;
+import android.os.Bundle;
+import android.widget.EditText;
+import android.widget.Spinner;
+import android.widget.TextView;
+
+
+public class MainActivity extends AppCompatActivity {
+
+      private Spinner spinner1;
+      private EditText et1,et2;
+      private TextView tv1;
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+         Et1 = (EditText)FindViewById(R.id.txt_valor1);
+         Et2 = (EditText)FindViewById(R.id.txt_valor2);
+         Et1 = (TextView)FindViewById(R.id.tv_resultado);
+         Spinner1 = (Spinner)FindViewById(R.id.spinner;
+
+   String [] opciones = (“sumar”,”restar”,”multiplicar”,”dividir”);
+   
+ArrayAdapter <String> adapter = new ArrayAdapter <String>(this, android.R.layout.simple_spinner_item,opciones);
+Spinner1.setAdapter(adpter);
+
+
+
+
+    }
+// metodo del boton
+Public void calcular(View view)
+String valor1 String = et1,get_TText().toString();
+String valor2 String = et2,get_TText().toString();
+Int valor1_int = Integer.parseInt(valor1_Sttring);
+Int valor2_int = Integer.parseInt(valor2_Sttring);
+
+
+
+
+
+
+
+String seleccion = spinner1.getselectedItem().toString();
+If (seleccion.equals(“sumar”)) {
+Int suma = valor1:int + valor2_int;
+String resultado = String.valueOf(suma);
+tv1.setText(resultado);
+} else If (seleccion.equals(“restar”)) {
+Int resta = valor1:int + valor2_int;
+String resultado = String.valueOf(resta);
+tv1.setText(resultado);
+ } else If (seleccion.equals(“multiplicar”)) {
+Int resta = valor1:int * valor2_int;
+String resultado = String.valueOf(multi);
+tv1.setText(resultado);
+} else If (seleccion.equals(“dividir”)) {
+If(valor2_int /= 0
+
+ 
+Int div = valor1:int / valor2_int;
+String resultado = String.valueOf(multi);
+tv1.setText(resultado);
+ } else 
+       Oast.makeText( this,”no se puede divider en cero”.Toast.LENGTH_LONG.show();
+
+}
+
+(STRINGS.XML)
+<resources>
+    <string name="app_name">Spinner</string>
+    <string name="txt_valor1">Primer valor</string>
+    <string name="txt_valor2">Segundo valor</string>
+    <string name="button">Calcular</string>
+    <string name="tv_resultado">Resultado</string>¡
+</resources>
+
+
+
+
+
+
+
+
+
