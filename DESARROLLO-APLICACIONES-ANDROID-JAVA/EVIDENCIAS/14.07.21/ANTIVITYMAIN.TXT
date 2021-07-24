@@ -1,0 +1,93 @@
+
+
+//
+Evidencia “DÍA 3 SEMANA 12” del 14/07:
+Crear una aplicación con SQLite que reciba el código, nombre y precio de un producto desde el teclado, y contenga cuatro botones para guardar el producto ingresado (sólo si los tres campos contienen texto), buscar un producto, modificar un producto y eliminar un producto, respectivamente, en la Base de Datos. Por hoy sólo implementar el botón para guardar.
+
+MAIN ACTIVITY.JAVA)
+
+package com.example.appmichel55;
+
+import androidx.appcompat.app.AppCompatActivity;
+import android.os.Bundle;
+import android.widget.EditText;
+import android.widget.Spinner;
+import android.widget.TextView;
+
+
+public class MainActivity extends AppCompatActivity {
+
+     
+      private EditText etn, etp;
+
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+         etn = (EditText)FindViewById(R.id.txt_nombre);
+         etp = (EditText)FindViewById(R.id.txt_password);
+}
+
+ 
+     
+// metodo para el boton 
+
+
+Public void Registrar(View view) {
+
+String nombre = etn.getText().toString();
+String passward = etp.getText().toString();
+
+If (nombre.length) == 0{
+    Toast.makeText(context: this, text: “debes de ingresar un nombre”,Toast.LENGTH_LONG).SHOW();
+      }
+If (passward.length) == 0{
+    Toast.makeText(context: this, text: “debes de ingresar un password”,Toast.LENGTH_LONG).SHOW();
+      }
+If (nombre.length) /= 0 and passward.length() /= 0 {
+    Toast.makeText(context: this, text: “registro en proceso”,Toast.LENGTH_LONG).SHOW();
+
+
+     }
+}
+ Admindb.JAVA)
+
+package com.example.bd;
+
+import android.content.Context;
+import android.database.sqlite,SQLiteDatabase;
+import android.database.sqlite,OpenHelper;
+
+import android.annotation.Nullable;
+
+
+public class Admindb extends SQLiteDatabase {
+      public Admindb(Nullable Context context, Nullable String name,
+      Nullable SQLiteDatabase.cursorFactory factory. Int
+      Super(context.name.factory,version);
+}
+    @Override
+Public void onCreate(SQLiteDataBase db) {
+  }  
+@Override
+Public void onUpgrade(SQLiteDataBase db,int oldVersion,int newVersion) {
+  }  
+}
+
+
+
+
+(STRINGS.XML)
+<resources>
+    <string name="app_name">bd</string>
+    <string name="crearProducto">Crear Producto</string>
+    <string name="buscarProducto">Buscar producto</string>
+    <string name="eliminarProducto">Eliminar producto</string>
+    <string name="modificarProducto">Modificar Producto</string>
+    <string name="codigo">Ingrese codigo de Producto</string>
+    <string name="nombre"> Ingrese nombre de Producto </string>
+    <string name="precio"> Ingrese precio de Producto </string>
+</resources>
