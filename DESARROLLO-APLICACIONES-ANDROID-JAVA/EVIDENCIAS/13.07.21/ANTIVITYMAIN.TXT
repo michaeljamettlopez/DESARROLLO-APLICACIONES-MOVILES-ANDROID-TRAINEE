@@ -1,0 +1,65 @@
+Evidencia “DÍA 2 SEMANA 12” del 13/07:
+1 - Avance del ejercicio anterior del 12/07.
+2 - Crear una aplicación que presente un formulario que el usuario rellenará y registrará a través de un botón, el cual abrirá una nueva Actividad que avise al usuario en caso de registro exitoso y muestre los datos registrados.
+
+
+
+
+MAIN ACTIVITY.JAVA)
+
+package com.example.appmichel55;
+
+import androidx.appcompat.app.AppCompatActivity;
+import android.os.Bundle;
+import android.widget.EditText;
+import android.widget.Spinner;
+import android.widget.TextView;
+
+
+public class MainActivity extends AppCompatActivity {
+
+     
+      private EditText etn, etp;
+
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+         etn = (EditText)FindViewById(R.id.txt_nombre);
+         etp = (EditText)FindViewById(R.id.txt_password);
+}
+
+    
+     
+// metodo para el boton 
+
+
+Public void Registrar(View view) {
+
+String nombre = etn.getText().toString();
+String passward = etp.getText().toString();
+
+If (nombre.length) == 0{
+    Toast.makeText(context: this, text: “debes de ingresar un nombre”,Toast.LENGTH_LONG).SHOW();
+      }
+If (passward.length) == 0{
+    Toast.makeText(context: this, text: “debes de ingresar un password”,Toast.LENGTH_LONG).SHOW();
+      }
+If (nombre.length) /= 0 and passward.length() /= 0 {
+    Toast.makeText(context: this, text: “registro en proceso”,Toast.LENGTH_LONG).SHOW();
+
+
+     }
+}
+
+
+(STRINGS.XML)
+<resources>
+    <string name="app_name">EditText</string>
+    <string name="txt_Nombre">Nombre</string>
+    <string name="txt_password">password</string>
+    <string name="Button">Registrar</string>
+</resources>
