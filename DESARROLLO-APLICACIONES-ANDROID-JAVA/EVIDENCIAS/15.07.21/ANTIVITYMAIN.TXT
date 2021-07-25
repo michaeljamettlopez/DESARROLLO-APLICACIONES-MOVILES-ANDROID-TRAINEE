@@ -1,0 +1,138 @@
+
+////Evidencia “DÍA 4 SEMANA 12” del 15/07:
+En la aplicación del ejercicio anterior del 14/07, implementar el botón para buscar un producto, para que muestre el nombre y el precio de un producto en los mismos EditText del ejercicio anterior correspondientes, según un código ingresado en el mismo EditText del ejercicio anterior correspondiente.////
+
+
+
+
+MAIN ACTIVITY.JAVA)
+
+package com.example.database;
+
+import android.content.ContentValues;
+import android.databasesqlite.SQLiteDatabase;
+import android.os.Bundle;
+import android.widget.EditText;
+import android.widget.Toast;
+
+
+public class MainActivity extends AppCompatActivity {
+      private EditText edcodigo, ednombre, edprecio;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+         edcodigo = findViewById(R.id.txt.codigo);
+         ednombre = findViewById(R.id.txt.nombre);
+         edprecio = findViewById(R.id.txt.precio);
+}
+    
+// metodo para el xxxxxxxxx //
+
+
+Public void crearProducto(View v) {
+Admindb admin = new admindb(this.”product”,null.l);
+SQLiteData base admin.getWritableDatabase();
+
+String codigo=edcodigo.getText().toString();
+String nombre=ednombre.getText().toString();
+String precio=edprecio.getText().toString();
+
+
+
+
+
+If (codigo.isEmpty() && ¡nombre.esEmpty() && precio_isEmpty()){
+
+ContentValues crear=new ContentValue();
+Crear.put/”código”.codigo);
+Crear.put/”nombre”.nombre);
+Crear.put/”precio”.precio);
+
+Base.insert(“producto”.null.crear);
+Base.close();
+edcodigo.setText(“”);
+ednombre.setText(“”);
+edprecio.setText(“”);
+ToastmakText(this,”Registro creado”, Toast.LENGTH_LONG).SHOW();
+
+   }else{
+
+ToastmakText(this,”Debe completer todos los campos”,
+Toast.LENGTH_LONG).SHOW();
+
+   }
+}
+
+Public void buscarProducto(View v){
+
+Admindb admin=new Admindb(this,•Producto”,null,version 1);
+SQLiteDatabase baseadmin.getWritableDatabase();
+
+String codigo=edcodigo.getText().toString();
+
+If(!codigo.isempty()){
+
+Cursor fila=base.rawquery(“select nombre, precio from”);
+
+}else{
+
+ToastmakText(this,”Debe ingresar un código de producto”,
+Toast.LENGTH_LONG).SHOW();
+
+
+   }
+}
+
+
+  //  Toast.makeText(context: this, text: “debes de ingresar un nombre”,Toast.LENGTH_LONG).SHOW();
+      }
+If (passward.length) == 0{
+    Toast.makeText(context: this, text: “debes de ingresar un password”,Toast.LENGTH_LONG).SHOW();
+      }
+If (nombre.length) /= 0 and passward.length() /= 0 {
+    Toast.makeText(context: this, text: “registro en proceso”,Toast.LENGTH_LONG).SHOW();//
+
+
+     }
+}
+ Admindb.JAVA)
+
+package com.example.bd;
+
+import android.content.Context;
+import android.database.sqlite,SQLiteDatabase;
+import android.database.sqlite,OpenHelper;
+
+import android.annotation.Nullable;
+
+
+public class Admindb extends SQLiteDatabase {
+      public Admindb(Nullable Context context, Nullable String name,
+      Nullable SQLiteDatabase.cursorFactory factory. Int
+      Super(context.name.factory,version);
+}
+    @Override
+Public void onCreate(SQLiteDataBase db) {
+  }  
+@Override
+Public void onUpgrade(SQLiteDataBase db,int oldVersion,int newVersion) {
+  }  
+}
+
+
+
+
+(STRINGS.XML)
+<resources>
+    <string name="app_name">bd</string>
+    <string name="crearProducto">Crear Producto</string>
+    <string name="buscarProducto">Buscar producto</string>
+    <string name="eliminarProducto">Eliminar producto</string>
+    <string name="modificarProducto">Modificar Producto</string>
+    <string name="codigo">Ingrese codigo de Producto</string>
+    <string name="nombre"> Ingrese nombre de Producto </string>
+    <string name="precio"> Ingrese precio de Producto </string>
+</resources>
