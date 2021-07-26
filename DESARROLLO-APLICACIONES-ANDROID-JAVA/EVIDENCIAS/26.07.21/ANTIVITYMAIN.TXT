@@ -1,0 +1,113 @@
+///
+Evidencia “DÍA 4 SEMANA 14  del 26/07/21:
+Hacer que la aplicación del ejercicio anterior del 24/07/21, como utilizar DatePickerDialog y TimePickerDialog
+//
+
+(MAIN ACTIVITY.JAVA)
+paquete  com.example.application.datepickerexample;
+	
+	import  android.app.DatePickerDialog ;
+	importar  android.app.Dialog ;
+	importar  android.os.Bundle ;
+	importar  android.support.annotation.NonNull ;
+	importar  android.support.v4.app.DialogFragment ;
+	
+	import  java.util.Calendar ;
+	
+	
+	La  clase  pública DatePickerFragment  extiende  DialogFragment {
+	
+	    @NonNull
+	    @Anular
+	    public  Dialog  onCreateDialog ( Bundle  SavedInstanceState ) {
+	        Calendario c =  Calendario . obtener Instancia();
+	        int año = c . obtener ( Calendario . AÑO );
+	        int mes = c . obtener ( Calendario . MES );
+	        int día = c . obtener ( Calendario . DAY_OF_MONTH );
+	
+	        return  new  DatePickerDialog (getActivity (), ( DatePickerDialog . OnDateSetListener ) getActivity (), año, mes, día);
+	    }
+	}
+
+
+
+
+
+paquete  com.example.application.datepickerexample ;
+	
+	import  android.app.DatePickerDialog ;
+	importar  android.support.v4.app.DialogFragment ;
+	importar  android.support.v7.app.AppCompatActivity ;
+	importar  android.os.Bundle ;
+	importar  android.view.View ;
+	importar  android.widget.Button ;
+	importar  android.widget.DatePicker ;
+	importar  android.widget.TextView ;
+	
+	import  java.text.DateFormat ;
+	import  java.util.Calendar ;
+	
+	La  clase  pública MainActivity  extiende  AppCompatActivity  implementa  DatePickerDialog . OnDateSetListener {
+	
+	    @Anular
+	    protected  void  onCreate ( Bundle  SavedInstanceState ) {
+	        super . onCreate (SavedInstanceState);
+	        setContentView ( R . diseño . activity_main);
+	
+	        Botón botón = ( Button ) findViewById ( R . De id . De botón);
+	        botón . setOnClickListener ( nueva  vista . OnClickListener () {
+	            @Anular
+	            public  void  onClick ( Ver  v ) {
+	                DialogFragment datePicker =  new  DatePickerFragment ();
+	                datePicker . show (getSupportFragmentManager (), " selector de fecha " );
+	            }
+	        });
+	    }
+	
+	    @Anular
+	    public  void  onDateSet ( vista DatePicker  , int año , int mes , int dayOfMonth ) {   
+	        Calendario c =  Calendario . obtener Instancia();
+	        c . set ( Calendario . AÑO , año);
+	        c . establecer ( Calendario . MES , mes);
+	        c . establecer ( Calendario . DAY_OF_MONTH , dayOfMonth);
+	        String currentDateString =  DateFormat . getDateInstance ( DateFormat . FULL ) . formato (c . getTime ());
+	
+	        TextView Textview = ( TextView ) findViewById ( R . ID . TextView);
+	        textView . setText (currentDateString);
+	    }
+	}
+
+
+
+
+(STRINGS.XML)
+
+
+(ACTIVITY MAIN.XML)
+
+	< RelativeLayout  xmlns : android = " http://schemas.android.com/apk/res/android "
+	    xmlns : tools = " http://schemas.android.com/tools "
+	    android : layout_width = " match_parent "
+	    android : layout_height = " match_parent "
+	    herramientas : context = " com.example.application.datepickerexample.MainActivity " >
+	
+	    < TextView
+	        android : id = " @ + id / textView "
+	        android : layout_width = " wrap_content "
+	        android : layout_height = " wrap_content "
+	        android : layout_above = " @ id / button "
+	        android : layout_centerHorizontal = " true "
+	        android : layout_marginBottom = " 28dp "
+	        android : text = " fecha "
+	        android : textSize = " 30sp " />
+	
+	    < Botón
+	        android : id = " @ + id / button "
+	        android : layout_width = " wrap_content "
+	        android : layout_height = " wrap_content "
+	        android : layout_centerHorizontal = " true "
+	        android : layout_centerVertical = " true "
+	        android : text = " selector de fecha abierto " />
+	
+	</ RelativeLayout >
+
