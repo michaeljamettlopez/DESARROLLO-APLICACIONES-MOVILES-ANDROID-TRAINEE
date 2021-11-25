@@ -1,1 +1,142 @@
 
+
+
+Entidades de ventas
+
+
+Video juegos
+Cliente
+Tienda
+Empleado
+Bodega
+videojuego
+inventario
+transaccion
+
+
+
+use biblioteca;
+
+				/*------------CLIENTE-------------------*/
+select * from Cliente;     
+select descripción from Cliente; 
+Insert into Cliente(
+nombreCliente,
+apellidoPCliente,
+apellidoMCliente,
+edadCliente,
+descripción)
+Values (
+'Scarlett',
+'Johansson',
+'movie',
+'50',
+'rich');    
+Select  *  from cliente where idCliente=4;
+Select  *  from cliente where nombreCliente='vanessa' and edadCliente ='52';
+Select * from cliente where idCliente not in (1,5);
+Select  *  from cliente where nombreCliente not in ('vanessa');
+Select  *  from cliente where nombreCliente <> 'vanessa';
+Select  *  from cliente where nombreCliente like '%a%';
+Select  *  from cliente where nombreCliente like 'a%a';
+Select  *  from cliente where nombreCliente like 'a%';
+Select  *  from cliente where nombreCliente like '%a';
+
+
+
+Select nombreCliente from cliente group by nombreCliente;
+
+
+
+
+
+
+
+
+		
+		/*---------------EMPLEADO--------------*/      
+select * from empleado;
+Insert into Empleado(
+nombre,
+apellidoP,
+apellidoM,
+edad,
+departamento,
+cargo,
+sueldo,
+descripción)
+Values (
+'duke',
+'ellintong',
+'perez',
+'40',
+'muser',
+'construccion',
+'900000',
+'play');
+Select campo from nombre_tabla;
+Select campo, campo2 from nombre_tabla;
+Select * from nombre_tabla;
+Select nombre, apellidoP, apellidoM, cargo from empleado where sueldo>500000 and cargo='construccion';
+Select nombre from empleado where departamento='muser';
+Select  *  from empleado where nombre <> 'vanessa';
+
+
+
+					/*------------LIBRO--------------*/ 
+select * from libro;
+Insert into libro(
+nombreLibro,
+autorLibro,
+editorialLibro,
+edicionLibro,
+añoPublicacionLibro,
+categoríaLibro,
+ejemplaresLibro,
+descripciónLibro)
+Values (
+'CUMBRES BORRASCOSAS',
+'EMYLI BRONTE',
+'no',
+'1847',
+'1847',
+'no',
+'1',
+'INGLES');
+Select  *  from libro where ejemplaresLibro>=10;
+Select  *  from libro where edicionLibro>=1 and edicionLibro<=2;
+Select autorLibro from libro where edicionLibro>=1 and edicionLibro<=3;
+Select  *  from libro where autorLibro <> 'vanessa';
+Select  *  from libro where añoPublicacionLibro between '1700' and '2000';
+
+		/*------------QUERY--------------*/ 
+select * from empleado;
+Select * from empleado group by nombre;
+
+
+Select  sueldo from empleado where sueldo  'vanessa';
+
+Select sueldo from empleado order by sueldo desc;
+Select sueldo from empleado order by sueldo asc;
+Select count(idEmpleado) as nombre from nombre;
+Select sum(sueldo) from empleado;
+
+Select count(idLibro) as empleado from empleado;
+
+
+
+select * from Tabla group by id;
+select nombre from Empleado group by Edad;
+select * from Libro group by categoria;
+select max(sueldo), departamento from Empleado group by departamento;
+select min(sueldo), departamento from Empleado group by departamento;
+select count(idEmpleado) as numEmpleado, departamento from Empleado group by departamento;
+select sum(sueldo) from Empleado;
+select count(ejemplares) as ejemplares, editorial from Libro group by editorial;
+select sum(ejemplares) as total from Libro;
+
+
+
+
+
+
