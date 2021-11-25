@@ -1,1 +1,46 @@
+////            CREA TABLA EMPLEADO   //////
+
+create table Empleado(
+idEmpleado int auto_increment,
+nombreEmpleado varchar(250),
+apellidoPEmpleado varchar(250), 
+apellidoMEmpleado varchar(250),
+edadEmpleado integer(250),
+departamentoEmpleado varchar (250),
+cargoEmpleado varchar(250),
+sueldoEmpleado integer(250),
+fechaIngresoEmpleado date(1,1,1),
+descripciónEmpleado text,
+primary key(idEmpleado)
+);
+
+
+////            CREA TABLA LIBRO          //////
+
+create table Libro(
+idLibro int auto_increment,
+nombreLibro varchar(250),
+autorLibro varchar(250), 
+editorialLibro varchar(250),
+edicionLibro integer(250),
+añoPublicacionLibro varchar (250),
+categoríaLibro varchar(250),
+ejemplaresLibro integer(250),
+descripciónLibro text,
+primary key(idLibro)
+);
+
+
+
+////            CREA TABLA CLIENTE          //////
+
+create table Cliente(
+idCliente int auto_increment,
+nombreCliente varchar(250),
+apellidoPCliente varchar(250), 
+apellidoMCliente varchar(250),
+edadCliente integer(250),
+descripción text,
+primary key(idCliente)
+);
 
