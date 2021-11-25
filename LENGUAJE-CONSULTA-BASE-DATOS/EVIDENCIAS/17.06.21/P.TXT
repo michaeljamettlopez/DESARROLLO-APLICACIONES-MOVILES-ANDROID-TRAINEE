@@ -1,1 +1,41 @@
+////Crear tabla//////
+create table nombre_t(
+id_tabla int auto_invrement,
+nombre carchar(250),
+descripción text,
+primary key(id_table)
+);
+
+////modificar tabla//////
+Alter table nombre_tabla add column campo tipocampo
+Alter table libro add column ejemplares integer;
+
+////modificar tabla  DROP//////
+drop table nombre_tabla
+drop table nombre_t;
+
+
+////añadir registros//////
+Insert into nombre_tabla (campos)
+Values (valores);
+
+Insert into nombre_t (nombrte,descripción)
+Values (“Alejandro”,”Gerente general de eca”);
+
+
+
+
+
+
+
+////sentencias//////
+Select recupera datos de la base de datos
+Insert añade nuevas filas de datos a la base de datos
+Delete suprime filas de datos de la base de datos
+Update modifica datos existentes en la base de datos
+
+use primerabd;
+create table primeraTabla (
+id
+)
 
