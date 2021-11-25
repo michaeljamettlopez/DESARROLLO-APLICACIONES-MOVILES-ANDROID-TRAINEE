@@ -1,1 +1,13 @@
+Create database primeradb char set utf8
+Use primeradb;
+Créate table primeraTabla(idTabla int auto_increment, nombre varchar(250),
+Descripcion text,
+Primary key(idTabla));
+Créate table región(
+idRegion int auto_increment,
+nombreRegion varchar(250),
+numeroRegion int(2),
+primary key (idRegion));
+create table permisos(
+idpe int auto_increment,
 
