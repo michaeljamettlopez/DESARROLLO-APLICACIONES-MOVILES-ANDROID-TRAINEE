@@ -1,1 +1,12 @@
+producto	usuario	venta	region	proveedores	envio		
+idp	idu	idv	idr	idp	ide		
+producto	nombres	productov	regionrr	nombrep	direccione		
+categoria	apellidos	iduv	comunarr	direccionp	fechaEnvio		
+plataforma	direccion	preciov		emailp			
+lanzamiento	comuna	formaPago		perosnaContacto			
+marca	region	fecha		telefonop			
+descripcion	telefono						
+foto	email						
+precio	password						
+	perfil						
 
