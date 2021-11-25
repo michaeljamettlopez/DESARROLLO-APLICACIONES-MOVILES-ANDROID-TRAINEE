@@ -1,1 +1,50 @@
+19.06.2021
+EVIDENCIA MICHAEL JAMETT LOPEZ
+
+////            comando select clausula from   //////
+
+Select campo from nombre_tabla
+Select campo, campo2 from nombre_tabla
+Select * from nombre_tabla
+
+
+////            CLAUSULA WHERE   //////
+
+Select *  from nombre_tabla where campo=valor
+Select  *  from nombre_tabla where id_trabla=1;
+Select * from nombre_tabla where departamento=”ventas”;
+
+////            CLAUSULA WHERE CON OPERARDOR LOGICO AND  //////
+
+Select *  from nombre_tabla where campo=valor and campo=valor
+Select  *  from empleado where  cargo=”secretaria” and departamento=”RRHH”
+***Comillas malas****
+
+
+////            CLAUSULA WHERE CON OPERARDOR LOGICO OR  //////
+
+Select *  from nombre_tabla where campo=valor or campo=valor
+Select *  from nombre_tabla where campo=valor or campo=valor
+Select  *  from empleado where  cargo=”secretaria” or departamento=”segura”
+
+***Comillas malas****
+
+
+////            CLAUSULA WHERE CON  IN  //////
+
+Select *  from nombre_tabla where campo in (lista de valores)
+Select *  from nombre_tabla where id_tabla in (1,4);
+Select  *  from empleado where  apellidoP in (“segura”,”castillo”,”pinto”);
+***Comillas malas****
+
+
+seleccionar  *  de Tabla;
+	seleccionar  *  de Empleado;
+	seleccionar  *  del libro;
+	seleccione  *  de tabla donde campo = ' tu ' ;
+	seleccione  *  de Empleado donde idEmpleado = 5 ;
+	seleccione  *  del Libro donde idlibro = 3 ;
+	seleccione  *  del Libro donde idlibro = 3  y aniopublicacion = 1976 ;
+	seleccione  *  del Libro donde idlibro = 3  o aniopublicacion = 1976 ;
+	seleccione  *  del Libro donde idlibro en ( 1 , 3 );
 
