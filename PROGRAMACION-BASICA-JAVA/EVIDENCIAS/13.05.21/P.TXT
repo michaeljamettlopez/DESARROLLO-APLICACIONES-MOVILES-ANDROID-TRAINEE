@@ -1,1 +1,82 @@
 
+Suma 10 números
+
+Int num
+Int sum
+Int i
+
+i=0
+Suma=0
+Hacer
+Escribir “ingrese un numero”
+Leer num
+Suma=suma+num
+i++
+Mientras(i<10)
+Escribir “la suma es”, suma
+
+Promedio de Edades
+Int num
+Int sum
+Int promedio
+Int i
+Str op
+
+i=0
+Suma=0
+Hacer
+Escribir “ingrese una edad”
+Leer num
+Suma=suma+num
+i++
+Escribir “desea ingresar otra edad s/n”
+Mientras(op==s)
+Promedio=suma/i
+Escribir “la edad promedio es promedio”, suma
+
+
+
+Ahorro de dinero mensual
+
+Int ahorro
+Int sum
+Int i
+Int m
+
+i=0
+Suma=0
+Hacer
+Escribir “ingrese un monto a ahorrar”
+Leer ahorro
+Suma=suma+ahorro
+M(i)=suma
+i++
+Mientras(i<12)
+Escribir “en un año ahorro”, suma
+Mientras (i>0)
+Escribir “el ahorro del mes”, i,”es”, m(i)
+Fin mientras
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
